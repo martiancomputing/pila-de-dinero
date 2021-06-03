@@ -19,7 +19,7 @@ export function AuthProvider({ children }) {
         return auth.signInWithEmailAndPassword(email, password)
     }
 
-    function logoout() {
+    function logout() {
         return auth.signOut()
     }
 
@@ -35,6 +35,7 @@ export function AuthProvider({ children }) {
     const value = {
         currentUser,
         login,
+        logout,
         signup
     }
     return (
